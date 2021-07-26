@@ -1,0 +1,20 @@
+format: jb-book
+root: hello
+parts:
+  - caption: 元
+    chapters:
+    - file: test
+  # - caption: 政治笔记
+  #   chapters: []
+  - caption: 语录集
+    chapters:
+    - file: buffalo
+#     - file: path/to/part1/chapter2
+#       sections:
+#       - file: path/to/part1/chapter2/section1
+#   - caption: Name of Part 2
+#     chapters:
+#     - file: path/to/part2/chapter1
+#     - file: path/to/part2/chapter2
+#       sections:
+#       - file: path/to/part2/chapter2/section1
