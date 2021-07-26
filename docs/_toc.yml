@@ -1,9 +1,14 @@
 format: jb-book
-root: index
+root: hello
 parts:
-#   - caption: Name of Part 1
-#     chapters:
-#     - file: path/to/part1/chapter1
+  - caption: 元
+    chapters:
+    - file: test
+  # - caption: 政治笔记
+  #   chapters: []
+  - caption: 语录集
+    chapters:
+    - file: buffalo
 #     - file: path/to/part1/chapter2
 #       sections:
 #       - file: path/to/part1/chapter2/section1

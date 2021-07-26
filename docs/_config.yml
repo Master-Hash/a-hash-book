@@ -3,8 +3,8 @@
 # This is also the "master list" of all allowed keys and values.
 
 # Book settings
-title: My Jupyter Book
-author: The Jupyter Book community
+title: 透视
+author: Master Hash
 copyright: "2021"
 logo: ""
 
@@ -28,13 +28,17 @@ html:
   use_edit_page_button: true
   use_repository_button: true
   use_issues_button: true
-  extra_navbar: Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-  extra_footer: ""
+  extra_navbar: 由 <a href="https://jupyterbook.org">Jupyter Book</a> 构建
+  extra_footer: "" # 要是我真有哪辈子还需要备案，这个有用
   home_page_in_navbar: true
   baseurl: ""
   comments:
     hypothesis: false
-    utterances: false
+    utterances:
+      repo: "Master-Hash/a-hash-book"
+      issue-term: "title"
+      label: "💬comment"
+      theme: "preferred-color-scheme"
 
 # LaTeX-specific settings
 latex:
