@@ -28,8 +28,10 @@ html:
   use_edit_page_button: true
   use_repository_button: true
   use_issues_button: true
-  extra_navbar: 由 <a href="https://jupyterbook.org">Jupyter Book</a> 构建
-  extra_footer: "" # 要是我真有哪辈子还需要备案，这个有用
+  extra_navbar: |
+    由 <a href="https://jupyterbook.org">Jupyter Book</a> 构建
+  extra_footer: |
+    <i class="fab fa-creative-commons-zero"></i>
   home_page_in_navbar: true
   baseurl: ""
   comments:
@@ -62,3 +64,4 @@ sphinx:
   local_extensions:   # A list of local extensions to load by sphinx specified by "name: path" items
   config:   # key-value pairs to directly over-ride the Sphinx configuration
     language: zh_cn
+    html_show_copyright: false
