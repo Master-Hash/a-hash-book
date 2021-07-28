@@ -13,6 +13,8 @@
 $ jb build -W --keep-going docs
 ```
 
+或使用 vsocde 编译命令：`Tasks: Run Build Task`（`Ctrl` + `Shift` + `B`）
+
 我目前对 pdflatex builder 效果很不满意。暂不提供。
 
 <!-- 如果需要编译整本书 pdf，请参阅 jupyter book 文档。
