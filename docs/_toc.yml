@@ -6,6 +6,8 @@ parts:
     - file: test
   # - caption: 政治笔记
   #   chapters: []
+  # 有一篇元文在教室
+  # toc 的构思也在
   - caption: 语录集
     chapters:
     - file: buffalo
