@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+    <title>透视</title>
+    <defs>
+        <style>
+            .line {
+                stroke: black;
+                stroke-width: 0.4;
+                stroke-linecap: square;
+                stroke-linejoin: miter;
+                fill: none;
+            }
+        </style>
+    </defs>
+    <g transform="matrix(.8 0 0 .8 1.6 1.6)">
+        <polygon class="line" points="0 0, 5.52 11.38, 16 4.29, 3.38 3.38, 4.29 16, 11.38 5.52" />
+    </g>
+</svg>

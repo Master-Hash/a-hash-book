@@ -5,14 +5,16 @@
 # Book settings
 title: 透视
 author: Master Hash
+# email 暂不填
 copyright: "2021"
-logo: ""
+logo: "images/favicon.svg"
 
 # Parse and render settings
 parse:
   myst_enable_extensions:
     # - amsmath
     - colon_fence
+    
     - deflist
     - dollarmath
     # - html_admonition
@@ -24,7 +26,7 @@ parse:
 
 # HTML-specific settings
 html:
-  favicon: ""
+  favicon: "images/favicon.svg"
   use_edit_page_button: true
   use_repository_button: true
   use_issues_button: true
