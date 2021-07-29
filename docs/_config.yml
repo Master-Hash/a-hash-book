@@ -63,6 +63,7 @@ sphinx:
   extra_extensions:   # A list of extra extensions to load by Sphinx (added to those already used by JB).
     - "sphinxext.opengraph"
   local_extensions:   # A list of local extensions to load by sphinx specified by "name: path" items
+    "pinned_tab_icons": "./_ext"
   config:   # key-value pairs to directly over-ride the Sphinx configuration
     language: zh_cn
     html_show_copyright: false
@@ -70,3 +71,5 @@ sphinx:
     ogp_site_name: "透视"
     ogp_image: "https://hash.toys/_static/favicon.svg"
     ogp_type: "website"
+    pinned_tab_icon: "/_static/favicon.svg"
+    pinned_tab_color: "lime"
