@@ -64,6 +64,7 @@ sphinx:
     - "sphinxext.opengraph"
   local_extensions:   # A list of local extensions to load by sphinx specified by "name: path" items
     "pinned_tab_icons": "./_ext"
+    "git_message": "./_ext"
   config:   # key-value pairs to directly over-ride the Sphinx configuration
     language: zh_cn
     html_show_copyright: false
