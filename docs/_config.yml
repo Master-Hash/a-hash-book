@@ -4,8 +4,7 @@
 
 # Book settings
 title: 透视
-author: Master Hash
-# email 暂不填
+author: ""  # 生成……
 copyright: "2021"
 logo: "images/favicon.svg"
 
@@ -14,7 +13,6 @@ parse:
   myst_enable_extensions:
     # - amsmath
     - colon_fence
-    
     - deflist
     - dollarmath
     # - html_admonition
@@ -63,7 +61,12 @@ repository:
 # Advanced and power-user settings
 sphinx:
   extra_extensions:   # A list of extra extensions to load by Sphinx (added to those already used by JB).
+    - "sphinxext.opengraph"
   local_extensions:   # A list of local extensions to load by sphinx specified by "name: path" items
   config:   # key-value pairs to directly over-ride the Sphinx configuration
     language: zh_cn
     html_show_copyright: false
+    ogp_site_url: "https://hash.toys/"
+    ogp_site_name: "透视"
+    ogp_image: "https://hash.toys/_static/favicon.svg"
+    ogp_type: "website"
