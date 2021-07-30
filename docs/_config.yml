@@ -31,7 +31,10 @@ html:
   extra_navbar: |
     由 <a href="https://jupyterbook.org">Jupyter Book</a> 构建
   extra_footer: |
-    <i class="fab fa-creative-commons-zero"></i>
+    <p>
+      <i class="fab fa-creative-commons"></i><i class="fab fa-creative-commons-zero"></i>
+      如无特别声明，本站所有作品以 <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.zh">CC0 1.0</a> 许可发表。
+    </p>
   home_page_in_navbar: true
   baseurl: ""
   comments:

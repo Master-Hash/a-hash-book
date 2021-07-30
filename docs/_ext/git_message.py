@@ -1,8 +1,22 @@
-from sys import stdout
 from typing import Any
+from hashlib import md5
+from jinja2 import Template
 import subprocess
 from sphinx.application import Sphinx
 import docutils.nodes as nodes
+
+footer_template = Template("""<ul>
+{% for i in xs %}
+{% set avatar = md5(i.ae.lower().encode()).hexdigest() %}
+  <li>
+    <a href="https://hash.toys/"><img src="https://gravatar.loli.top/avatar/{{ avatar }}" alt="@{{ i.an }}"></a>
+    {{ i.an }}
+    {{ i.s }}
+    <a href="https://github.com/Master-Hash/a-hash-book/commit/{{ i.H }}">{{ i.h }}</a>
+    {{ i.ad }}
+  </li>
+{% endfor %}
+</ul>""")
 
 
 def update_metadata(
@@ -15,22 +29,19 @@ def update_metadata(
     if "sourcename" not in context:
         return
     data = subprocess.run(["git", "-P", "log", "--follow",
-                          "--format='%an¦%ce¦%ad¦%h¦%s'",
-                           "--", f"docs/{context['sourcename']}*"
+                          "--format=%an¦%ae¦%ad¦%h¦%H¦%s",
+                           "--", f"docs/{context['sourcename']}"
                            ],
                           capture_output=True,
                           )
     # 原谅我偷懒，用了一个实际上可行，但极不严谨的手法
+    # i: j for (i, j) in zip(("an", "ae", "ad", "h", "H", "s"),
     tmp = data.stdout.decode("utf-8").split("\n")[:-1]
-    xs = [i.split("¦") for i in tmp]
+    tmp2 = (zip(("an", "ae", "ad", "h", "H", "s"), i.split("¦")) for i in tmp)
+    xs = [{j: k for j, k in i} for i in tmp2]
+    print(xs)
     if doctree and xs:
-        # subprocess.run(['clear'])
-        # for i in context:
-        #     print(i + str(" " if type(context[i]) != str else context[i]))
-        # print(x)
-        for x in xs:
-            context["theme_extra_footer"] += \
-                f'作者 {x[0]} 邮箱 {x[1]} 修改时间 {x[2]} commit hash {x[3]} commit message {x[4]} 没法集成 有空再改'
+        context["theme_extra_footer"] += footer_template.render(xs=xs, md5=md5)
 
 
 def setup(app: Sphinx) -> dict[str, Any]:
