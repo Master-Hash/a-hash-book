@@ -7,6 +7,9 @@ import docutils.nodes as nodes
 
 footer_template = Template("""<ul>
 {% for i in xs %}
+{% if i.ae == "56669192+Master-Hash@users.noreply.github.com" %}
+{% set i.ae = "A137294381b@163.com" %}
+{% endif %}
 {% set avatar = md5(i.ae.lower().encode()).hexdigest() %}
   <li>
     <a href="https://hash.toys/"><img src="https://gravatar.loli.top/avatar/{{ avatar }}" alt="@{{ i.an }}"></a>
